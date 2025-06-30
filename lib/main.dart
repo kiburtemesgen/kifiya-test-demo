@@ -5,7 +5,6 @@ import 'package:kifiya_test/presentation/authentication/auth_bloc/auth_bloc.dart
 import 'package:kifiya_test/presentation/authentication/login_screen.dart';
 import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc/favorite_bloc.dart';
 import 'package:kifiya_test/presentation/product/blocs/product/product_bloc/product_bloc.dart';
-import 'package:kifiya_test/presentation/product/blocs/product/product_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +21,10 @@ class KifiyaApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<ProductBloc>(create: (context) => getIt<ProductBloc>()),
-        BlocProvider<AuthBloc>(create: (context) => getIt<AuthBloc>()),
+        BlocProvider<AuthBloc>(
+          create: (context) =>
+              getIt<AuthBloc>()..add(AuthEvent.checkInitialAuth()),
+        ),
         BlocProvider<FavoriteBloc>(create: (context) => getIt<FavoriteBloc>()),
       ],
       child: MaterialApp(

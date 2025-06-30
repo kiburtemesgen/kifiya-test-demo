@@ -15,62 +15,30 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AuthEvent {
 
- String get username; String get password;
-/// Create a copy of AuthEvent
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$AuthEventCopyWith<AuthEvent> get copyWith => _$AuthEventCopyWithImpl<AuthEvent>(this as AuthEvent, _$identity);
+
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthEvent&&(identical(other.username, username) || other.username == username)&&(identical(other.password, password) || other.password == password));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthEvent);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,username,password);
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'AuthEvent(username: $username, password: $password)';
+  return 'AuthEvent()';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $AuthEventCopyWith<$Res>  {
-  factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) _then) = _$AuthEventCopyWithImpl;
-@useResult
-$Res call({
- String username, String password
-});
-
-
-
-
-}
-/// @nodoc
-class _$AuthEventCopyWithImpl<$Res>
-    implements $AuthEventCopyWith<$Res> {
-  _$AuthEventCopyWithImpl(this._self, this._then);
-
-  final AuthEvent _self;
-  final $Res Function(AuthEvent) _then;
-
-/// Create a copy of AuthEvent
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? username = null,Object? password = null,}) {
-  return _then(_self.copyWith(
-username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
-as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
-as String,
-  ));
-}
-
+class $AuthEventCopyWith<$Res>  {
+$AuthEventCopyWith(AuthEvent _, $Res Function(AuthEvent) __);
 }
 
 
@@ -81,12 +49,12 @@ class _Login implements AuthEvent {
   const _Login({required this.username, required this.password});
   
 
-@override final  String username;
-@override final  String password;
+ final  String username;
+ final  String password;
 
 /// Create a copy of AuthEvent
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$LoginCopyWith<_Login> get copyWith => __$LoginCopyWithImpl<_Login>(this, _$identity);
 
@@ -112,7 +80,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$LoginCopyWith<$Res> implements $AuthEventCopyWith<$Res> {
   factory _$LoginCopyWith(_Login value, $Res Function(_Login) _then) = __$LoginCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  String username, String password
 });
@@ -131,7 +99,7 @@ class __$LoginCopyWithImpl<$Res>
 
 /// Create a copy of AuthEvent
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? username = null,Object? password = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? username = null,Object? password = null,}) {
   return _then(_Login(
 username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
 as String,password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
@@ -141,6 +109,70 @@ as String,
 
 
 }
+
+/// @nodoc
+
+
+class _CheckInitialAuth implements AuthEvent {
+  const _CheckInitialAuth();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CheckInitialAuth);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'AuthEvent.checkInitialAuth()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class _Logout implements AuthEvent {
+  const _Logout();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Logout);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'AuthEvent.logout()';
+}
+
+
+}
+
+
+
 
 /// @nodoc
 mixin _$AuthState {
