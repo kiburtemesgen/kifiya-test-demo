@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kifiya_test/presentation/authentication/auth_bloc/auth_bloc.dart';
-import 'package:kifiya_test/presentation/product_screen.dart';
+import 'package:kifiya_test/presentation/product/blocs/product/product_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

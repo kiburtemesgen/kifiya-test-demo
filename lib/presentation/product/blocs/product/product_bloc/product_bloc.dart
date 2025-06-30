@@ -8,7 +8,7 @@ import 'package:injectable/injectable.dart';
 import 'package:kifiya_test/data/models/product_model.dart';
 import 'package:kifiya_test/data/repositories/product_repository.dart';
 
-part 'product_state.dart';
+part '../product_state.dart';
 part 'product_event.dart';
 part 'product_bloc.freezed.dart';
 
