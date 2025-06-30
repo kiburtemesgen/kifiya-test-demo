@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kifiya_test/data/models/product_model.dart';
-import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc.dart';
+import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc/favorite_bloc.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
