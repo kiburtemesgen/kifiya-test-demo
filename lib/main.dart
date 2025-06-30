@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kifiya_test/core/di.dart';
 import 'package:kifiya_test/presentation/authentication/auth_bloc/auth_bloc.dart';
 import 'package:kifiya_test/presentation/authentication/login_screen.dart';
-import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc.dart';
+import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc/favorite_bloc.dart';
 import 'package:kifiya_test/presentation/product/blocs/product/product_bloc/product_bloc.dart';
 import 'package:kifiya_test/presentation/product/blocs/product/product_screen.dart';
 
