@@ -17,7 +17,7 @@ import 'package:injectable/injectable.dart' as _i526;
 import '../data/repositories/auth_repository.dart' as _i578;
 import '../data/repositories/product_repository.dart' as _i162;
 import '../presentation/authentication/auth_bloc/auth_bloc.dart' as _i860;
-import '../presentation/product/blocs/favorite/favorite_bloc.dart' as _i178;
+import '../presentation/product/blocs/favorite/favorite_bloc/favorite_bloc.dart' as _i178;
 import '../presentation/product/blocs/product/product_bloc/product_bloc.dart' as _i102;
 import 'app_interceptor.dart' as _i824;
 import 'db_module.dart' as _i982;
