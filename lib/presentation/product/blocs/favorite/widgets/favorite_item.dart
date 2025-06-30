@@ -1,14 +1,13 @@
-part of '../product_screen.dart';
 
-class _ProductItem extends StatelessWidget {
-  const _ProductItem({
+part of '../favorite_screen.dart';
+
+class _FavoriteItem extends StatelessWidget {
+  const _FavoriteItem({
     required this.product,
-    required this.onFavorite,
-    required this.isFavorite,
+    required this.removeFavorite,
   });
   final ProductModel product;
-  final Function() onFavorite;
-  final bool isFavorite;
+  final Function() removeFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +31,8 @@ class _ProductItem extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: IconButton(
-                    onPressed: onFavorite,
-                    icon: Icon(
-                      Icons.favorite,
-                      color: isFavorite ? Colors.red : Colors.grey,
-                    ),
+                    onPressed: removeFavorite,
+                    icon: Icon(Icons.favorite, color: Colors.red),
                   ),
                 ),
               ],

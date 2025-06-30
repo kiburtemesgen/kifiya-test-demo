@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kifiya_test/data/models/product_model.dart';
 import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_bloc/favorite_bloc.dart';
 import 'package:kifiya_test/presentation/product/blocs/product/product_bloc/product_bloc.dart';
-import 'package:kifiya_test/presentation/product/favorite_screen.dart';
+import 'package:kifiya_test/presentation/product/blocs/favorite/favorite_screen.dart';
 
 part './widgets/product_item.dart';
 
